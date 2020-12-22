@@ -13,7 +13,7 @@
 # limitations under the License.
 
 presubmits:
-  aws/eks-distro:
+  TerryHowe/eks-distro:
   - name: kubernetes-1-18-presubmit
     always_run: false
     # TODO: tweak to only run if Makefile, build, release branch files change
