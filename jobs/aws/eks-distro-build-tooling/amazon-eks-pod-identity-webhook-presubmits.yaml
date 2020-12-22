@@ -16,7 +16,7 @@ presubmits:
   TerryHowe/eks-distro-build-tooling:
   - name: amazon-eks-pod-identity-webhook-tooling-presubmit
     always_run: false
-    run_if_changed: "projects/aws/amazon-eks-pod-identity-webhook/.*"
+    run_if_changed: "projects/TerryHowe/amazon-eks-pod-identity-webhook/.*"
     max_concurrency: 10
     cluster: "prow-presubmits-cluster"
     skip_report: false
@@ -36,7 +36,7 @@ presubmits:
         - bash
         - -c
         - >
-          make build -C projects/aws/amazon-eks-pod-identity-webhook DEVELOPMENT=false
+          make build -C projects/TerryHowe/amazon-eks-pod-identity-webhook DEVELOPMENT=false
           &&
           touch /status/done
         livenessProbe:
