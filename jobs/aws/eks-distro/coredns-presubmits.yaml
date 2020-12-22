@@ -13,7 +13,7 @@
 # limitations under the License.
 
 presubmits:
-  aws/eks-distro:
+  TerryHowe/eks-distro:
   - name: coredns-presubmit
     always_run: false
     run_if_changed: "projects/coredns/coredns/.*"

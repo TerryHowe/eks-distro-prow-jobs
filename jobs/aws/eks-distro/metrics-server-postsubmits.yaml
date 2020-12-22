@@ -13,7 +13,7 @@
 # limitations under the License.
 
 postsubmits:
-  aws/eks-distro:
+  TerryHowe/eks-distro:
   - name: metrics-server-postsubmit
     always_run: false
     run_if_changed: "projects/kubernetes-sigs/metrics-server/.*"
