@@ -13,16 +13,16 @@
 # limitations under the License.
 
 presubmits:
-  aws/eks-distro-build-tooling:
+  TerryHowe/eks-distro-build-tooling:
   - name: amazon-eks-pod-identity-webhook-tooling-presubmit
     always_run: false
-    run_if_changed: "projects/aws/amazon-eks-pod-identity-webhook/.*"
+    run_if_changed: "projects/TerryHowe/amazon-eks-pod-identity-webhook/.*"
     max_concurrency: 10
     cluster: "prow-presubmits-cluster"
     skip_report: false
     decoration_config:
       gcs_configuration:
-        bucket: s3://prowpresubmitsdataclusterstack-prowbucket7c73355c-vfwwxd2eb4gp
+        bucket: s3://prow-data-presubmits-devstack-prowbucket7c73355c-181dr7bowcxj3
         path_strategy: explicit
       s3_credentials_secret: s3-credentials
     labels:
@@ -36,7 +36,7 @@ presubmits:
         - bash
         - -c
         - >
-          make build -C projects/aws/amazon-eks-pod-identity-webhook DEVELOPMENT=false
+          make build -C projects/TerryHowe/amazon-eks-pod-identity-webhook DEVELOPMENT=false
           &&
           touch /status/done
         livenessProbe:
